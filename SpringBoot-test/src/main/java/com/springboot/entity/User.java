@@ -1,7 +1,7 @@
 package com.springboot.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.springboot.base.BaseEntity;
 import lombok.Data;
 

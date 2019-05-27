@@ -1,11 +1,10 @@
 spring:
  datasource:
-  driver-class-name: com.mysql.jdbc.Driver
   druid:
+   driver-class-name: com.mysql.jdbc.Driver
    username: root
    password: 123456
    url: jdbc:mysql://127.0.0.1:3306/well_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-  type: com.alibaba.druid.pool.DruidDataSource
 
 
 
@@ -13,11 +12,12 @@ mybatis-plus:
   mapper-locations: classpath:com/springboot/**/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.springboot.**.entity
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    refresh-mapper: true
   configuration:
     map-underscore-to-camel-case: true
-  global-config:
-    db-config:
-      id-type: uuid
     #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
 
 

@@ -1,7 +1,7 @@
 package com.springboot.base;
 
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 
 /**
  * <ul>

@@ -22,14 +22,13 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao,User> implements Us
     @Override
     public void addSomething() {
         User user = new User();
-        user.setUserName("zhanghao");
+        user.setUserName("zhanghao22");
         user.setSex(1);
         user.setPhone("18801592977");
         user.setEmail("787758657@qq.com");
-        if (save(user)) {
+        if (insert(user)) {
             System.out.println("保存成功");
         }
     }
-
 
 }
