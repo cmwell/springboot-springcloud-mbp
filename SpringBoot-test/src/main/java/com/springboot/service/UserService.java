@@ -16,5 +16,8 @@ import java.util.List;
  */
 public interface UserService extends BaseService<User> {
 
-  void listSomething();
+  void addSomething();
+
+
+
 }

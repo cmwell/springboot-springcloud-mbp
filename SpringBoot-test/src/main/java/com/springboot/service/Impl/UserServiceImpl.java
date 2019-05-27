@@ -20,10 +20,16 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao,User> implements Us
 
 
     @Override
-    public void listSomething() {
+    public void addSomething() {
         User user = new User();
-        user.setName("zhangh");
-        user.setStatus("2");
-        save(user);
+        user.setUserName("zhanghao");
+        user.setSex(1);
+        user.setPhone("18801592977");
+        user.setEmail("787758657@qq.com");
+        if (save(user)) {
+            System.out.println("保存成功");
+        }
     }
+
+
 }

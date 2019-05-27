@@ -23,7 +23,7 @@ public class SampleTest {
 
     @Test
     public void testABC(){
-    userService.listSomething();
+    userService.addSomething();
 
     }
 }

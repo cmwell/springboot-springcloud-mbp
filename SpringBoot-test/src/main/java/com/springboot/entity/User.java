@@ -17,15 +17,17 @@ import java.io.Serializable;
  * </ul>
  */
 @Data
-@TableName(value = "ZH_USER")
+@TableName(value = "well_user")
 public class User extends BaseEntity<User> {
     private static final long serialVersionUID = 1L;
-    @TableId("id")
+    @TableId("ID")
     private String id;
-    private String name;
-    private Integer age;
+    private String userName;
+    private Integer sex;
     private String email;
-    private String status;
+    private String phone;
+    private String createTime;
+    private String updateTime;
 
     @Override
     protected Serializable pkVal() {
