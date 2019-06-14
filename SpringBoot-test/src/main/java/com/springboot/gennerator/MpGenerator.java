@@ -1,4 +1,4 @@
-package gennerator;
+package com.springboot.gennerator;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.*;
