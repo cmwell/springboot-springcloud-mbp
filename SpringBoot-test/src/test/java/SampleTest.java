@@ -1,10 +1,11 @@
 import com.springboot.MySpringbootApplication;
-import com.springboot.service.UserService;
+import com.springboot.test01.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
 
 /**
  * <ul>
@@ -21,11 +22,19 @@ public class SampleTest {
    @Autowired
    private UserService userService;
 
+
     @Test
-    public void testABC(){
-    userService.addSomething();
+    public void testABC() {
+       userService.addSomething();
 
     }
+
+    @Test
+    public void restMan(){
+
+    }
+
+
 }
 
 

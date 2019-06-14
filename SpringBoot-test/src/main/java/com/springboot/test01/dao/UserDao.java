@@ -1,9 +1,8 @@
-package com.springboot.mapper;
+package com.springboot.test01.dao;
 
 import com.springboot.base.BaseDao;
-import com.springboot.entity.User;
 import org.apache.ibatis.annotations.Mapper;
-
+import com.springboot.test01.entity.User;
 /**
  * <ul>
  * <li>项目名称：MyTest</li>
@@ -14,5 +13,5 @@ import org.apache.ibatis.annotations.Mapper;
  * </ul>
  */
 @Mapper
-public interface UserDao extends BaseDao<User>{
+public interface UserDao extends BaseDao<User> {
 }

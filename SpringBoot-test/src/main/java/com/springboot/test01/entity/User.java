@@ -1,4 +1,4 @@
-package com.springboot.entity;
+package com.springboot.test01.entity;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
@@ -28,6 +28,7 @@ public class User extends BaseEntity<User> {
     private String phone;
     private String createTime;
     private String updateTime;
+    private String buyType;
 
     @Override
     protected Serializable pkVal() {

@@ -1,9 +1,9 @@
-package com.springboot.entity;
+package com.springboot.test01.entity;
 
 import lombok.Data;
 
 /**
- * <ul>
+ * <ul> php序列化文件
  * <li>项目名称：MyTest</li>
  * <li>文件名称：Test</li>
  * <li>user：张浩</li>
