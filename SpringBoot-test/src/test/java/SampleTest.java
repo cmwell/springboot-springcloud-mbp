@@ -31,7 +31,7 @@ public class SampleTest {
 
     @Test
     public void restMan(){
-
+    System.out.println("中国");
     }
 
 
