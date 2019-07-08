@@ -1,109 +1,31 @@
 package com.springboot.base;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 /**
- * <ul>
- * <li>功能描述：公用抽象controller</li>
- * <li>创建人:周颂灵</li>
- * <li>创建时间：2017/8/23-13:38</li>
+ * <ul> 基础框架
+ * 基础框架
+ * <li>项目名称：mybatis-plus2.0</li>
+ * <li>文件名称：BaseController</li>
+ * <li>user：张浩</li>
+ * <li>日期：2019年06月17日 11时08分</li>
+ * <li>Copyright ©2017, 广州职赢未来信息科技有限公司 All Rights Reserved.</li>
  * </ul>
  */
-public abstract class BaseController<T> {
+public abstract  class BaseController {
+    public final Logger log = LoggerFactory.getLogger(this.getClass());
 
-
-    /**
-     * 日志记录
-     */
-    public final Logger log = LoggerFactory.getLogger(getClass());
-
-    /**
-     * 返回对象信息
-     *
-     * @param success 是否成功
-     * @param msg     操作信息
-     * @param data    操作数据
-     * @return
-     */
-    protected String resultInfo(boolean success, String msg, Object data) {
-        JSONObject json = new JSONObject();
-        json.put("error_code", success ? 0 : -1);
-        json.put("reason", msg);
-        json.put("result", data);
-        return JSONObject.toJSONStringWithDateFormat(json, "yyyy-MM-dd HH:mm:ss", SerializerFeature.WriteMapNullValue);
+    public BaseController() {
     }
 
-    /**
-     * 返回对象信息
-     *
-     * @param success 是否成功
-     * @param msg     操作信息
-     * @return
-     */
-    protected String resultInfo(boolean success, String msg) {
-        return resultInfo(success, msg, null);
+    protected ResultEntity resultInfo(boolean success, String msg, Object data) {
+        return new ResultEntity(success, msg, data);
     }
 
-    /**
-     * 返回对象信息
-     *
-     * @param success          是否成功
-     * @param msg              操作信息
-     * @param data             数据
-     * @param ignoreAnnotation 忽略注解
-     * @return java.lang.String
-     * @author 周颂灵
-     * @Date 2017-11-09 17:00:03
-     */
-    protected String resultInfo(boolean success, String msg, Object data, boolean ignoreAnnotation) {
-        if (ignoreAnnotation) {
-            JSONObject json = new JSONObject();
-            json.put("error_code", success ? 0 : -1);
-            json.put("reason", msg);
-            json.put("result", data);
-            return json.toString();
-        }
-        return resultInfo(success, msg, data);
-
-
+    protected ResultEntity resultInfo(boolean success, String msg) {
+        return this.resultInfo(success, msg, (Object)null);
     }
 
 
-    /**
-     * 结果集
-     *
-     * @param success 是否成功
-     * @param msg     信息
-     * @param object  结果
-     * @return com.zhiyingwl.iwooc.biz.base.ResultEntity
-     * @author 周颂灵
-     * @Date 2018-03-07 17:24:14
-     */
-    protected <T> ResultEntity resultEntity(boolean success, String msg, T object) {
-        return ResultEntity.builder()
-                .success(success)
-                .msg(msg)
-                .data(object)
-                .build();
-    }
-
-    /**
-     * 操作结果
-     *
-     * @param success 是否成功
-     * @param msg     信息
-     * @return com.zhiyingwl.iwooc.biz.base.ResultEntity
-     * @author 周颂灵
-     * @Date 2018-03-07 17:26:08
-     */
-    protected ResultEntity resultEntity(boolean success, String msg) {
-        return ResultEntity.builder()
-                .success(success)
-                .msg(msg)
-                .build();
-    }
 }

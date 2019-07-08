@@ -56,4 +56,7 @@ public interface UserService extends BaseService<User> {
    * @date 2019/6/11 11:28
    */
   void dateTest();
+
+
+  void listS();
 }

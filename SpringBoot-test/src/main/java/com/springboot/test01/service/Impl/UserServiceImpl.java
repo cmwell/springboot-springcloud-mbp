@@ -108,4 +108,14 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao,User> implements Us
         System.out.println(DateUtil.endOfMonth(dateTime));
 
     }
+
+    @Override
+    public void  listS(){
+        List<String> list = new ArrayList<>();
+        list.add("zhanghao");
+        list.add("zhgan");
+        EntityWrapper<User> ew = new EntityWrapper<>();
+
+
+    }
 }
