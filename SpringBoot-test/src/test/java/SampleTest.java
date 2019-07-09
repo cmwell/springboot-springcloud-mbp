@@ -33,6 +33,7 @@ public class SampleTest {
    @Test
    public void testString(){
     wellUserService.testString();
+      System.out.println("测试修改");
 
    }
 
