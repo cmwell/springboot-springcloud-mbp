@@ -11,7 +11,10 @@ import com.springboot.base.BaseEntity;
 
 import com.baomidou.mybatisplus.annotations.Version;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -23,8 +26,11 @@ import lombok.experimental.Accessors;
  * @since 2019-06-14
  */
 @Data
+@Builder
 @Accessors(chain = true)
 @TableName("well_user")
+@AllArgsConstructor
+@NoArgsConstructor
 public class WellUser extends BaseEntity<WellUser> {
 
     private static final long serialVersionUID = 1L;

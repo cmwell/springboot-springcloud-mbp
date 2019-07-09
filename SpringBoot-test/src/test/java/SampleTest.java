@@ -32,6 +32,7 @@ public class SampleTest {
 
    @Test
    public void testString(){
+    wellUserService.testString();
 
    }
 

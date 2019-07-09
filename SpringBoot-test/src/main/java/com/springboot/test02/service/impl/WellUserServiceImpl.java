@@ -1,5 +1,7 @@
 package com.springboot.test02.service.impl;
 
+import cn.hutool.json.JSONArray;
+import cn.hutool.json.JSONStrFormater;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.springboot.base.BaseServiceImpl;
 import com.springboot.test02.dao.WellUserDao;
@@ -22,15 +24,14 @@ public class WellUserServiceImpl extends BaseServiceImpl<WellUserDao, WellUser> 
 
     @Override
     public void testString() {
-        Date dateTime = new Date();
-        if (dateTime!=null){
-            dateTime = null;
+        boolean wangba = insert(WellUser.builder()
+                .userName("wangba")
+                .phone("110")
+                .email("787758657@qq.com")
+                .buyType(JSONStrFormater.format("[7,6,5]")).build());
+        if (wangba){
+            System.out.println("保存成功");
         }
-        WellUser wellUser = new WellUser();
-        wellUser.setId("0264bad482cd4768813cd520a1450d2e");
-        wellUser.setUpdateTime(new Date());
-        wellUser.setCreateTime(dateTime);
-        System.out.println(insertOrUpdate(wellUser));
 
     }
 
