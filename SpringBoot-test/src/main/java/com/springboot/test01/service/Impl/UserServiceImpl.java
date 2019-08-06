@@ -70,7 +70,6 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao,User> implements Us
       //排序测试
         List<Integer> collect = l.parallelStream().sorted(Comparator.comparing(Integer::longValue).reversed()).collect(Collectors.toList());
 
-
     }
 
     @Override

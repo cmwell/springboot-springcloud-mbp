@@ -1,14 +1,17 @@
-import cn.hutool.crypto.SecureUtil;
+import cn.hutool.core.date.DateUtil;
 import com.springboot.MySpringbootApplication;
-import com.springboot.test01.service.UserService;
-import com.springboot.test02.service.WellUserService;
+import com.springboot.test01.entity.TestC;
+import com.springboot.test02.entity.WellUser;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.phprpc.util.PHPSerializer;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -23,19 +26,13 @@ import java.util.Date;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes={MySpringbootApplication.class})
 public class SampleTest {
-   @Autowired
-   private UserService userService;
-
-   @Autowired
-   private WellUserService wellUserService;
 
 
    @Test
-   public void testString(){
-    wellUserService.testString();
-      System.out.println("测试修改");
-
+   public void testString() throws Exception {
+      System.out.println("github测试");
    }
+
 
 }
 

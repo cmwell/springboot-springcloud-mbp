@@ -23,6 +23,17 @@ public class TestC {
     private String  job;
     private String  sex;
     private String contact_email;
+    private String birthday;
+    /**
+     * 专业负责人
+     * */
+    private String person_in_Charge;
+    /**
+     * 专业负责人联系方式
+     * */
+    private String person_in_charge_contact;
+
+
 
 
 }
